@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>FAQs</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow-y: scroll;
+    background: url(guitar-blur.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+#topimg{
+    background: url(guitar.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+#navbar{
+    color: oldlace;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 20px;
+    box-shadow: 0 0 20px black;
+}
+.nav a{
+    color: oldlace;
+    text-decoration: none;
+    font-size: 19px;
+    margin-left: 10px;
+    font-weight: 600;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    padding: 5px 15px;
+    transition: .5s;
+}
+.nav a:hover,
+.nav a.active{
+    color: #000000;
+    border: 3px solid oldlace;
+    text-shadow: 0 0 20px oldlace;
+    box-shadow: 0 0 10px oldlace;
+    background-color: oldlace;
+}
+.icons a{
+    color: oldlace;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 7px;
+    font-weight: 600;
+    border: 3px solid oldlace;
+    border-radius: 50px;
+    padding: 7px;
+    padding-bottom: 2px;
+    transition: .5s;
+}
+.icons a:hover{
+    background-color: oldlace;
+    background-color: oldlace;
+    border: 3px solid oldlace;
+    color: #130f1e;
+    box-shadow: 0 0 10px oldlace;
+}
+.logoimg{
+    width: 100px;
+}
+#medianav{
+    display: none;
+}
+#homepage{
+    background-color: #000000;
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+    box-shadow: 0 0 20px black;
+    width: 90%;
+}
+#msg{
+    align-items: center;
+}
+#msg img{
+    width: 50%;
+}
+#msg p{
+    margin-top: 30px;
+    color: oldlace;
+    font-size: 150%;
+}
+#video{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+#vidloop{
+    height: 100%;
+    width: 100%;
+}
+#NP{
+    width: 60%;
+    margin: auto;
+    border: 3px solid #dabaa8;
+    border-radius: 20px;
+    padding: 60px 30px;
+    padding-left: 60px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px black;
+    background-color: #000000;
+}
+.newprod h3{
+    border: 3px solid #dabaa8;
+    text-shadow: 0 0 10px black;
+    color: #dabaa8;
+    font-weight: 600;
+    transform: translateY(60px);
+    background-color: #000000;
+    width: 350px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px 0;
+}
+.card{
+    background-color: #130f1e;
+    box-shadow: 0 0 10px black;
+}
+.btn{
+    background-color: transparent;
+    border: 3px solid oldlace;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .3s;
+    font-weight: 800;
+    color: oldlace;
+}
+.btn:hover{
+    background-color: oldlace;
+    box-shadow: 0 0 10px oldlace;
+    color: #130f1e;
+    border: 3px solid oldlace;
+}
+#accessdiv{
+    border: 3px solid oldlace;
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 40px 20px;
+}
+#footer{
+    background-color: #000000;
+    margin-top: 50px;
+    padding: 50px 500px;
+    border-top: 3px solid #dabaa8;
+}
+#foot a{
+    color: oldlace;
+    text-decoration: none;
+}
+#foot{
+    margin-bottom: 20px;
+}
+#footer h5{
+    color: #dabaa8;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#Sfoot a{
+    color: oldlace;
+    font-size: 30px;
+}
+#copyright{
+    height: 100%;
+    background-color: #dabaa8;
+    align-items: center;
+    padding-top: 10px;
+    color: #130f1e;
+}
+.menu a{
+    display: none;
+    color: oldlace;
+    font-size: 40px;
+}
+.closed a{
+    display: none;
+    color: oldlace;
+    font-size: 40px;
+}
+.menu{
+    display: none;
+}
+#faqs{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+#qa{
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    padding-bottom: 50px;
+}
+#qa h3{
+    color: oldlace;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#qa img{
+    width: 200px;
+    margin-top: 50px;
+}
+.accordion-body{
+    text-align: left;
+}
+.accordion-button{
+    font-weight: 600;
+}
+
+@media (max-width:560px) {
+    #faqs{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+#qa{
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    padding-bottom: 50px;
+}
+#qa h3{
+    color: oldlace;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+    .nav a{
+    display: none;
+    }
+    .menu{
+    display: inline-block;
+    }
+    .icons .menu{
+    border-radius: 10px;
+    padding: 0px 7px;
+    padding-bottom: 0;
+    padding-top: 4px;
+    }
+    .icons a{
+    color: oldlace;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 5px;
+    font-weight: 600;
+    border: 3px solid oldlace;
+    border-radius: 50px;
+    padding: 7px;
+    padding-bottom: 2px;
+    transition: .5s;
+    }
+    .closed a{
+    display: block;
+    }
+    #medianav{
+    background-color: #000000;
+    display: block;
+    height: 200px;
+    overflow: hidden;
+    transition: .3s;
+    }
+    #medianav a{
+    display: block;
+    color: oldlace;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    }   
+    #homepage{
+    background-color: #000000;
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+    box-shadow: 0 0 20px black;
+    width: 100%;
+    }
+    #msg{
+    align-items: center;
+    margin-top: 10px;
+    }
+    #msg img{
+    width: 50%;
+    }
+    #msg p{
+    margin-top: 30px;
+    color: oldlace;
+    font-size: 100%;
+    }
+    #video{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    }
+    #vidloop{
+    height: 100%;
+    width: 325px;
+    }
+    .newprod h1{
+    color: oldlace;
+    font-weight: 600;
+    transform: translateY(30px);
+    background-color: #1d182b;
+    width: 350px;
+    margin: auto;
+    border: 3px solid oldlace;
+    border-radius: 10px;
+    }
+    .card{
+    background-color: #000000;
+    box-shadow: 0 0 10px black;
+    margin: auto;
+    }
+    #NP{
+    width: 100%;
+    margin: auto;
+    border: 3px solid #dabaa8;
+    border-radius: 20px;
+    padding: 60px 0;
+    margin-top: 10px;
+    box-shadow: 0 0 20px black;
+    background-color: #000000;
+    }
+    #footer{
+    background-color: #000000;
+    margin-top: 100px;
+    padding: 50px 100px;
+    border-top: 3px solid #dabaa8;
+    }
+    #copyright{
+    height: 1%;
+    background-color: #dabaa8;
+    align-items: center;
+    padding-top: 20px;
+    color: #000000;
+    }
+}
+
+</style>
+<body>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-12" id="topimg">
+                <p style="color: transparent;">none</p>
+            </div>
+            <div class="col-12" id="navbar">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="" class="logoimg"></a>
+            </div>
+            <div class="nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="Products.html">Products</a>
+                <a href="dealers.html">Dealers</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="icons">
+                <a href="Account.html"><i class='bx bxs-user'></i></a>
+                <a href="#"><i class='bx bxs-cart' ></i></a>
+                <a href="#" class="menu" onclick="togglemenu()"><i class='bx bx-menu'></i></a>    
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="medianav">
+                <a href="index.html">Home</a>
+                <a href="Products.html">Products</a>
+                <a href="dealers.html">Dealers</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="row" id="faqs">
+            <div class="col" id="qa">
+                <h3>FREQUENTLY ASKED QUESTIONS</h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1. What types of guitars do you offer on your website?
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            We offer a comprehensive selection of guitars on our website, catering to a wide range of musical preferences and playing styles. Our inventory includes: <br><br>
+
+                            <strong>Acoustic Guitars:</strong> Ideal for those who appreciate the warm, natural sound of wooden instruments. We offer a variety of body shapes, tonewoods, and sizes, from classic dreadnoughts to parlor guitars, allowing you to find the perfect acoustic guitar that suits your musical genre and personal taste. <br><br>
+
+                            <strong>Electric Guitars:</strong> For those looking to rock out, our electric guitar collection covers a broad spectrum of styles, from classic single-cutaway designs to sleek, modern superstrats. You'll find options with various pickups and configurations, enabling you to achieve your desired tone and sound. <br><br>
+
+                            <strong>Specialty Guitars:</strong> If you're looking for unique or specialty guitars, we also offer resonator guitars, travel-sized guitars, and more. <br><br>
+
+                            Our website provides detailed product descriptions, specifications, and high-quality images to help you make an informed decision. We believe in catering to musicians at all levels, from beginners to seasoned professionals, so you'll find guitars suitable for your skill level and budget. <br><br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2. Which guitar brands are available for purchase on your website?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            At our online store, we are proud to carry an extensive selection of guitars from some of the most reputable and renowned brands in the industry. Our commitment to offering quality instruments means that you can explore guitars from brands such as: <br><br>
+
+                            <strong>Fender:</strong> Known for their iconic Stratocaster and Telecaster models, Fender guitars are synonymous with rock and blues music.<br><br>
+
+                            <strong>Gibson:</strong> Gibson guitars, including the Les Paul and SG, are celebrated for their premium craftsmanship and distinctive tones.<br><br>
+
+                            <strong>Martin:</strong> Martin's acoustic guitars have set the standard for quality and tone in the acoustic guitar world for over a century.<br><br>
+
+                            <strong>Taylor:</strong> Taylor guitars are celebrated for their innovation and modern design, providing a wide tonal spectrum.<br><br>
+
+                            <strong>Ibanez:</strong> Ibanez offers a diverse range of electric and acoustic guitars, catering to various genres and player preferences.<br><br>
+
+                            <strong>Yamaha:</strong> Yamaha's guitars are known for their exceptional quality and affordability, making them a great choice for beginners and professionals alike.<br><br>
+
+                            And Many More: Our selection goes beyond these brands, encompassing a wide variety of options, from boutique builders to well-established manufacturers.<br><br>
+
+                            You can explore and compare different models from these brands on our website, each offering its own unique features, design, and tonal characteristics.<br><br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3. What guitar accessories can I purchase from your website?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Our website is not just a destination for guitars; it's also your one-stop shop for a wide array of guitar accessories that can enhance your playing experience and keep your instrument in top condition. We offer a diverse selection of accessories, including: <br><br>
+                            
+                            <strong>Strings:</strong> We stock a variety of string sets for acoustic, electric, classical, and bass guitars. You can choose from different materials, gauges, and brands to achieve your preferred sound and playability.<br><br>
+
+                            <strong>Picks:</strong> Whether you prefer traditional picks, fingerpicks, or thumb picks, we have a range of options to suit your playing style. Picks come in various thicknesses and materials.<br><br>
+
+                            <strong>Straps:</strong> Guitar straps not only provide comfort during long playing sessions but also add a touch of style to your instrument. We offer an assortment of designs, colors, and materials.<br><br>
+
+                            <strong>Cases and Gig Bags:</strong> Protect your guitar with a high-quality case or gig bag. Our selection includes hardshell cases, padded gig bags, and soft cases to fit various guitar sizes and styles.<br><br>
+
+                            <strong>Amplifiers:</strong> For electric guitar players, we offer a selection of amplifiers that range from practice amps to professional-grade amplification systems.<br><br>
+
+                            <strong>Effects Pedals:</strong> Explore a range of effects pedals to shape and enhance your guitar's sound. From distortion to delay, we have a pedal for every sonic need.<br><br>
+
+                            <strong>Tuners and Metronomes:</strong> Keep your guitar in tune and stay on beat with our assortment of tuners and metronomes.<br><br>
+
+                            <strong>Capos:</strong> Capos allow you to change the pitch of your guitar strings, creating unique voicings and facilitating playing in different keys.<br><br>
+
+                            <strong>Cables and Connectors:</strong> Ensure a clean and reliable signal with our collection of instrument cables and connectors.<br><br>
+
+                            <strong>Maintenance Tools:</strong> We provide maintenance tools, such as string winders, fretboard cleaners, and more, to help you keep your guitar in excellent condition.<br><br>
+
+                            Our website offers a user-friendly shopping experience, making it easy to browse, compare, and purchase the accessories that best suit your needs. Whether you're a beginner or a seasoned musician, our accessories will enhance your playing and caring for your instrument.<br><br>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+        <div class="row" id="footer">
+            <div class="col" id="foot">
+                <h5>Products</h5>
+                <a href="Products.html">Guitar</a><br>
+                <a href="chapman.html">Electric Guitar</a><br>
+                <a href="capo.html">Accessories</a>
+            </div>
+            <div class="col" id="foot">
+                <h5>Support</h5>
+                <a href="contact.html">Contact Us</a><br>
+                <a href="FAQs.html">FAQs</a>
+            </div>
+            <div class="col" id="foot">
+                <h5>About</h5>
+                <a href="BandH.html">Brand and History</a>
+            </div>
+            <div class="col" id="Sfoot">
+                <h5>Social Media Accounts</h5>
+                <a href=""><i class='bx bxl-facebook-square'></i></a>
+                <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+                <a href=""><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+        </div>
+        <div class="row" id="copyright">
+            <div class="col-12" id="Cfoot">
+                <p>© 2023 Fretboard Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var medianav = document.getElementById("medianav");
+        medianav.style.maxHeight = "0vh";
+
+        function togglemenu() {
+            if (medianav.style.maxHeight === "0vh") {
+                medianav.style.maxHeight = "27vh";
+            } else {
+                medianav.style.maxHeight = "0vh";
+            }
+        }
+
+        // Add this function to close #medianav when "Home" is clicked
+        function closeMenu() {
+            medianav.style.maxHeight = "0vh";
+        }
+
+        // Get the "Home" link and add a click event listener
+        var homeLink = document.querySelector("a[href='home.html']");
+        homeLink.addEventListener("click", closeMenu);
+    </script>
+</body>
+</html>
